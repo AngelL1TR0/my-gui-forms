@@ -33,7 +33,6 @@ public class CalculatorForm {
         frame.setVisible(true);
         CalculatorForm form = new CalculatorForm();
         frame.setContentPane(form.mainPanel);
-
         frame.setBounds(200, 500, 200, 300);
         frame.repaint();
         frame.revalidate();
