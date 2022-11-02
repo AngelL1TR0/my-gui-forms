@@ -2,13 +2,8 @@ import javax.swing.*;
 
 public class MyTitledBorderForm {
     private JPanel mainPanel;
-    private JPanel search;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
+    private JRadioButton byNameRadioButton;
+    private JRadioButton byIDRadioButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
@@ -16,9 +11,8 @@ public class MyTitledBorderForm {
         MyTitledBorderForm form = new MyTitledBorderForm();
         frame.setContentPane(form.mainPanel);
 
-        frame.setBounds(200, 500, 200, 300);
+        frame.pack();
         frame.repaint();
         frame.revalidate();
     }
-
 }
