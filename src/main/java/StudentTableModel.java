@@ -3,10 +3,9 @@ import java.util.List;
 
 public class StudentTableModel extends AbstractTableModel {
 
-    private final static int NAME_COLUMN_INDEX = 1;
-    private final static int SURNAME_COLUMN_INDEX = 2;
-    private final static int NIF_COLUMN_INDEX = 0;
-    private final static int AGE_COLUMN_INDEX = 3;
+    private enum StudentTableColumns {
+        Name, Surname, Nif, Age
+    }
 
     private List<Student> students;
 
@@ -22,19 +21,20 @@ public class StudentTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return StudentTableColumns.values().length;
     }
 
     @Override
     public String getColumnName(int column) {
-        switch (column) {
-            case NAME_COLUMN_INDEX:
+        // StudentTableColumns.values() = [Name, Surname, Nif, Age]
+        switch (StudentTableColumns.values()[column]) {
+            case Name:
                 return "Nombre";
-            case SURNAME_COLUMN_INDEX:
+            case Surname:
                 return "Apellidos";
-            case NIF_COLUMN_INDEX:
+            case Nif:
                 return "NIF";
-            case AGE_COLUMN_INDEX:
+            case Age:
                 return "Edad";
             default:
                 throw new RuntimeException("No existe la columna " + column);
@@ -44,18 +44,17 @@ public class StudentTableModel extends AbstractTableModel {
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Student student = students.get(rowIndex);
-        switch (columnIndex) {
-            case NAME_COLUMN_INDEX:
+        switch (StudentTableColumns.values()[columnIndex]) {
+            case Name:
                 return student.getName();
-            case SURNAME_COLUMN_INDEX:
+            case Surname:
                 return student.getSurname();
-            case NIF_COLUMN_INDEX:
+            case Nif:
                 return student.getNif();
-            case AGE_COLUMN_INDEX:
+            case Age:
                 return student.getAge();
             default:
                 throw new RuntimeException("No existe la columna " + columnIndex);
         }
-
     }
 }

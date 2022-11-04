@@ -26,16 +26,7 @@ public class MyTableForm {
                         new Student("10000002X","Bob", "Esponja",    3),
                         new Student("10000003X","P", "Pocoyo",    6),
                         new Student("10000000X","Peppa", "Pig",    4),
-                        new Student("10000001X","George", "Pig",    2),
-                        new Student("10000002X","Bob", "Esponja",    3),
-                        new Student("10000003X","P", "Pocoyo",    6),new Student("10000000X","Peppa", "Pig",    4),
-                        new Student("10000001X","George", "Pig",    2),
-                        new Student("10000002X","Bob", "Esponja",    3),
-                        new Student("10000003X","P", "Pocoyo",    6),
-                        new Student("10000000X","Peppa", "Pig",    4),
-                        new Student("10000001X","George", "Pig",    2),
-                        new Student("10000002X","Bob", "Esponja",    3),
-                        new Student("10000003X","P", "Pocoyo",    6)
+                        new Student("10000001X","George", "Pig",    2)
                 )
         );
         studentTable.setModel(model);
