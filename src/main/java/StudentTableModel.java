@@ -2,6 +2,7 @@ import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
 public class StudentTableModel extends AbstractTableModel {
+
     private final static int NAME_COLUMN_INDEX = 1;
     private final static int SURNAME_COLUMN_INDEX = 2;
     private final static int NIF_COLUMN_INDEX = 0;
@@ -57,5 +58,4 @@ public class StudentTableModel extends AbstractTableModel {
         }
 
     }
-}
 }

@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.util.List;
 
 public class MyTableForm {
+
     private JPanel mainPanel;
     private JTable studentTable;
 
@@ -47,9 +48,8 @@ public class MyTableForm {
         frame.setContentPane(myForm.mainPanel);
 
         frame.setVisible(true);
-        frame.setSize(300,200);
+        frame.pack();
         frame.revalidate();
         frame.repaint();
     }
 }
-
