@@ -4,7 +4,18 @@ import java.util.List;
 public class StudentTableModel extends AbstractTableModel {
 
     private enum StudentTableColumns {
-        Name, Surname, Nif, Age
+        // Aquí defino todas las columnas
+        Nif("NIF"),
+        Name("Nombre"),
+        Surname("Apellidos"),
+        Age("Edad");
+
+        // Estos son los campos de cada columna
+        final String header;
+
+        StudentTableColumns(String header) {
+            this.header = header;
+        }
     }
 
     private List<Student> students;
@@ -26,19 +37,7 @@ public class StudentTableModel extends AbstractTableModel {
 
     @Override
     public String getColumnName(int column) {
-        // StudentTableColumns.values() = [Name, Surname, Nif, Age]
-        switch (StudentTableColumns.values()[column]) {
-            case Name:
-                return "Nombre";
-            case Surname:
-                return "Apellidos";
-            case Nif:
-                return "NIF";
-            case Age:
-                return "Edad";
-            default:
-                throw new RuntimeException("No existe la columna " + column);
-        }
+        return StudentTableColumns.values()[column].header;
     }
 
     @Override
