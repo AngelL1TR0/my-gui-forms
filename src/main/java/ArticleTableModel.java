@@ -19,7 +19,7 @@ public class ArticleTableModel extends AbstractTableModel {
         super();
         this.articles = articles;
     }
-    
+
     @Override
     public int getRowCount() {
         return articles.size();
