@@ -2,7 +2,6 @@ import javax.swing.*;
 
 public class MyTitledBorderForm {
     private JPanel mainPanel;
-    private JPanel buttonPanel;
     private JRadioButton byNameRadioButton;
     private JRadioButton byIDRadioButton;
 

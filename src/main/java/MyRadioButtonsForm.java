@@ -1,7 +1,6 @@
 import javax.swing.*;
 
-public class MyRadioButtons {
-
+public class MyRadioButtonsForm {
     private JPanel mainPanel;
     private JRadioButton linuxRadioButton;
     private JRadioButton windowsRadioButton;
@@ -13,7 +12,7 @@ public class MyRadioButtons {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
-        MyRadioButtons myForm = new MyRadioButtons();
+        MyRadioButtonsForm myForm = new MyRadioButtonsForm();
 
         frame.setContentPane(myForm.mainPanel);
 
