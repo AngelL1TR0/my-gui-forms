@@ -1,13 +1,20 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyTableForm {
-
-    private JPanel mainPanel;
     private JTable studentTable;
+    private JPanel mainPanel;
+    private JButton Añadir;
+    private JButton Borrar;
+    private JPanel buttonsPanel;
+    private JScrollPane encabezado;
 
     public MyTableForm() {
         StudentTableModel model = new StudentTableModel(
+
                 List.of(
                         new Student("10000000X","Peppa", "Pig",    4),
                         new Student("10000001X","George", "Pig",    2),
@@ -29,8 +36,23 @@ public class MyTableForm {
                         new Student("10000001X","George", "Pig",    2)
                 )
         );
+        List<Student> studentList = new ArrayList<>();
         studentTable.setModel(model);
+        Añadir.addActionListener(actionEvent -> {
+            Student other = new Student("14523645412P", "Angel", "Torija", 23);
+
+            studentList.add(other);
+        });
+        Borrar.addActionListener(actionEvent -> {
+            int selected = studentTable.getSelectedRow();
+            if(selected != 1){
+
+            }
+        });
     }
+
+
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
@@ -44,3 +66,4 @@ public class MyTableForm {
         frame.repaint();
     }
 }
+
